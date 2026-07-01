@@ -13,7 +13,8 @@ for line in handle:
     
     if "From " not in line:
         continue
-        
+
+    line.rstrip()    
     words = line.split()
     
     mails[words[1]] = mails.get(words[1], 0) + 1
